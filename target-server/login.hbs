@@ -1,0 +1,97 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    body {
+			background: rgba(0,0,0,0.02);
+			font-family: 'Source Sans Pro', sans-serif;
+  padding-top:90px;
+		}
+		.container {
+			
+		}
+
+		.form-inputs {
+			background: #FFF;
+			padding-top: 35px !important;
+			padding: 20px;
+		}
+
+		.form-inputs input {
+			border:none;
+			border-bottom:1px solid rgba(0,0,0,0.5);
+			border-radius: 0;
+			box-shadow: none;
+
+		}
+
+		.form-inputs input:focus {
+			box-shadow: none;
+			 rgba(103,147,252,0.8)
+		}
+
+		#btn-submit {
+			width: 100%;
+			background: rgba(103,147,252,0.8);
+			border:none;
+			color: #FFF;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			text-transform: uppercase;
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+
+		#btn-submit:hover {
+			background: rgba(103,147,252,0.9);
+		}
+
+		#form-login {
+			box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+			margin-top: -35px;
+
+		}
+
+		.title {
+			width: 70px;
+			position: relative;
+		    
+			margin: 0 auto;
+			
+			text-align: center;
+			border-radius: 100px;
+			height: 70px;
+			text-transform: uppercase;
+			background: #83a6fa;
+			color: #FFF;
+
+		}
+
+		.title p {
+			position: relative;
+			top: 50%;
+		    transform: translateY(-50%);
+		}
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="title">
+        <p>Inicia Sesión</p>
+      </div>
+      <form id="form-login" action="/login" method="POST">
+        <div class="form-inputs">
+          <p>
+            <input name="email" class="form-control" type="email" placeholder="Correo">
+          </p>
+          <p>
+            <input name="password" class="form-control" type="password" placeholder="Contraseña">
+          </p>
+        </div>
+        <input type="submit" value="Iniciar Sesión" id="btn-submit">
+      </form>
+    </div>
+  </div>
+</body>
+
+
+
